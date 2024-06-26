@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        };
+
+        getWeìght() {
+            return this.weight;
+        };
+
+        setWeight(weight) {
+            this.weight = weight;
+        };
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert('qua tao da an het!');
+            } else
+                this.weight--;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        };
+
+        getName() {
+            return this.name;
+        };
+
+        setName() {
+            this.name = name;
+        };
+
+        getWeight() {
+            return this.weight;
+        };
+
+        isMale() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+
+        };
+
+        getGender() {
+            if (this.isMale()) {
+                return 'male';
+            } else {
+                return 'female';
+            }
+        };
+        setWeight() {
+            this.weight = weight;
+        };
+
+        say(string) {
+            console.log(string);
+        };
+        checkApple(apple){
+            return apple.isEmpty();
+        };
+        eat(apple){
+            if(this.getWeight() > 0) {
+                apple.decreaseApple();
+                this.weight++;
+            } else {
+                alert("tao da het");
+            }
+        };
+        getInfor(human){
+            alert(human.name + " " + human.weight + " " + human.getGender());
+        }
+    };
+
+    let adam = new Human('adam', 1 , 70);
+    let eva = new Human('eva', 2, 55);
+    let apple_1 = new Apple(10);
+
+    adam.say('toi la adam' + '<br>');
+    eva.say('toi la eva' + '<br>');
+
+    while(apple_1.isEmpty() !==true) {
+        document.write('adam hoc tao' + '<br>');
+        adam.eat(apple_1);
+
+        document.write('qua tao con: ' + '<br>');
+            document.write(apple_1.getWeìght() + "don vi" + '<br>');
+        document.write("can nag cua adam: " + adam.getWeight() + "sdon vi" + '<br>');
+        document.write("<br>");
+
+     document.write('eva an tao' + '<br>');
+     eva.eat(apple_1);
+
+     document.write('Qua tao con: ' + '<br>');
+     document.write(apple_1.getWeìght() + ' don vi ' + '<br>');
+     document.write("can nag eva = " + eva.getWeight() + ' doon vi ' + '<br>');
+    }
+</script>
+</body>
+</html>
