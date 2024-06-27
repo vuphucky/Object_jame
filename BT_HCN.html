@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle{
+        constructor(width, length) {
+        this.width = width;
+        this.length = length;
+        }
+        get Width() {
+            return this.width;
+        }
+        set Width(width) {
+            this.width = this.width;
+        }
+        get Length(){
+            return this.length;
+        }
+        get Area () {
+            return this.width * this.length;
+        }
+        get Permiter() {
+           return (this.width + this.length) * 2;
+        }
+    }
+
+    let myRectangle = new Rectangle(10,20)
+    document.write("chieu rong hcn: " + myRectangle.width + '<br>');
+    document.write("chieu dai hcn: " + myRectangle.length + '<br>');
+    document.write('dien tich hcn: ' + myRectangle.Area + '<br>');
+    document.write('chu vi hcn: ' + myRectangle.Permiter + '<br>');
+
+</script>
+</body>
+</html>
