@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>`Title`</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(number) {
+        this.number = number;
+        }
+        getChangeCToF(){
+            return (this.number * 1.8) + 32;
+        }
+        getChangeCToKenvin(){
+            return (this.number * 20) + 273.15;
+        }
+    }
+    let temperature_1 = new Temperature(20);
+    document.write(" c sang f = " + temperature_1.getChangeCToF() + '<br>');
+    document.write("c sang kenvin = " + temperature_1.getChangeCToKenvin());
+</script>
+</body>
+</html>
